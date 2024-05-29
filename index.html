@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+    <title>Tipificador Desplegable 3</title>
+  </head>
+  <body>
+    <nav>
+      <section class="banner" id="banner"></section>
+      <section class="navbar">
+        <input type="text" id="searchInput" placeholder="¿Qué estás buscando?" />
+        <button class="btn-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="btn-secondary" id="searchInputCleaner">Limpiar busqueda</button>
+      </section>
+    </nav>
+    <section class="content">
+      <!-- Contenedor del acorceón -->
+      <div class="category-container principal-title-container">
+        <h2 class="title">Macrocategorías</h2>
+        <!-- Acordeón -->
+        <div class="accordion"></div>
+      </div>
+      <!---->
+
+      <!-- Textos -->
+      <div class="description-container">
+        <div class="principal-container">
+          <div>
+            <p class="title-helper">Selecciona la macrocategoría con el que quieres trabajar</p>
+            <button class="btn-option" id="changeToFirstSheet" onclick="changeSheet(0)">Medicina</button>
+            <button class="btn-option" id="changeToSecondSheet" onclick="changeSheet(1)">Videojuegos</button>
+            <button class="btn-option" id="changeToSecondSheet" onclick="changeSheet(2)">Métodos de pago</button>
+          </div>
+          <div>
+            <p class="title-helper">Actualmente estás en:</p>
+            <h5 class="title" id="principal-title">Medicina</h5>
+          </div>
+        </div>
+        <div class="description-subcontainer">
+          <h5 class="title" id="first-title">Macrocategoría | Subcategoría | Microcateogría</h5>
+          <div class="description-definitions">
+            <div class="description-content" id="first-description">
+              <h3>Aplicación para atención al cliente</h3>
+              <p>
+                Esta aplicación fue diseñada originalmente para agilizar el trabajo de los agentes de un call center,
+                permitiéndoles encontrar rápidamente la información necesaria para responder a las dudas o sugerencias
+                de los clientes.
+              </p>
+              <p>
+                La aplicación funciona a través de una página web en la que los agentes pueden buscar la información que
+                necesitan utilizando palabras clave o frases específicas. La aplicación también permite filtrar los
+                resultados de búsqueda por diferentes categorías, lo que facilita aún más la búsqueda de la información
+                correcta.
+              </p>
+              <p>
+                Si bien no es posible acceder a la información original de la aplicación, se han incluido algunos
+                ejemplos prácticos para demostrar su funcionamiento. Estos ejemplos muestran cómo los agentes pueden
+                utilizar la aplicación para encontrar la información que necesitan y responder rápidamente a las
+                consultas de los clientes.
+              </p>
+              <br />
+              <p>Características principales:</p>
+              <ul>
+                <li>Búsqueda por palabras clave o frases</li>
+                <li>Filtrado de resultados por categorías</li>
+                <li>Ejemplos prácticos de uso</li>
+              </ul>
+              <br />
+              <p>Beneficios:</p>
+              <ul>
+                <li>Mejora la atención al cliente</li>
+                <li>Aumenta la eficiencia de los agentes</li>
+                <li>Reduce el tiempo de resolución de problemas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--
+        <div class="description-subcontainer">
+          <h5 class="title" id="second-title">PROCESO</h5>
+          <div class="description-definitions">
+            <p class="description-content" id="second-description">
+              Aquí encontrarás información relevante que describa la subcategoría seleccionada.
+            </p>
+          </div>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <footer>
+      <h1 class="title footer-text">Tipificador Desplegable Anidado | Creado por Oscar Loaiza &#169; 2024</h1>
+      <p class="footer-text">
+        <a target="_blank" href="https://github.com/oscarloaizadev">GitHub</a> |
+        <a href="https://oscarloaiza-portfolio.vercel.app/">Portafolio</a>
+      </p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/excelProcessor.js"></script>
+    <script src="js/jsonProcessor.js"></script>
+    <script src="js/infoUpdater.js"></script>
+    <script src="js/searchAlgorithm.js"></script>
+    <!---->
+  </body>
+</html>
